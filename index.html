@@ -632,53 +632,61 @@
             font-size: 14px;
         }
 
-         /* WhatsApp Floating Button */
-        .whatsapp-float {
+                .whatsapp-float {
             position: fixed;
-            width: 50px;
-            height: 50px;
+            width: 56px;
+            height: 56px;
             bottom: 20px;
             right: 20px;
-            background-color: #25d366;
+            background-color: #25D366;
+            color: white;
             border-radius: 50%;
-            box-shadow: 0 4px 8px rgba(37, 211, 102, 0.3);
-            z-index: 10000;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            text-decoration: none;
             transition: all 0.3s ease;
-            font-size: 24px;
+            animation: pulse 2s infinite;
+            text-decoration: none;
         }
 
         .whatsapp-float:hover {
-            background-color: #128c4a;
+            background-color: #128C7E;
             transform: scale(1.1);
-            box-shadow: 0 6px 12px rgba(37, 211, 102, 0.4);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }
 
-        /* Responsive adjustments */
+        /* Pulse Animation */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* Mobile Responsiveness */
         @media (max-width: 480px) {
+            .whatsapp-float {
+                width: 48px;
+                height: 48px;
+                font-size: 26px;
+                bottom: 15px;
+                right: 15px;
+            }
+        }
+
+        /* Extra Small Devices */
+        @media (max-width: 360px) {
             .whatsapp-float {
                 width: 44px;
                 height: 44px;
-                bottom: 15px;
-                right: 15px;
-                font-size: 22px;
-            }
-        }
-
-        @media (max-width: 360px) {
-            .whatsapp-float {
-                width: 40px;
-                height: 40px;
+                font-size: 24px;
                 bottom: 10px;
                 right: 10px;
-                font-size: 20px;
             }
         }
-        
     </style>
 </head>
 
@@ -1044,10 +1052,6 @@
         </div>
     </section>
 
-     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/919265941833?text=Hi%2C%20I%20visited%20your%20website%20and%20I'm%20interested%20in%20one%20of%20the%20products.%20Can%20you%20please%20share%20more%20details%3F" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp" class="whatsapp-float">
-        <i class="fab fa-whatsapp" aria-hidden="true"></i>
-    </a>
     <!-- Footer -->
     <footer id="contact">
         <div class="container">
@@ -1134,6 +1138,11 @@
             });
         });
     </script>
+     <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919876543210?text=Hi%2C%20I%20visited%20your%20website%20and%20I'm%20interested%20in%20one%20of%20the%20products.%20Can%20you%20please%20share%20more%20details%3F"
+        target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp" class="whatsapp-float">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
 </body>
 
 </html>
