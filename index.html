@@ -631,6 +631,38 @@
             color: var(--gray);
             font-size: 14px;
         }
+
+         /* WhatsApp Floating Button */
+         .whatsapp-float {
+            position: fixed;
+            width: 56px;
+            height: 56px;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            border-radius: 50%;
+            box-shadow: 0 8px 15px rgba(37, 211, 102, 0.6);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .whatsapp-float:hover,
+        .whatsapp-float:focus {
+            background-color: #128c4a;
+            outline: none;
+        }
+        @media (max-width: 480px) {
+            .whatsapp-float {
+                width: 48px;
+                height: 48px;
+                bottom: 16px;
+                right: 16px;
+            }
+        }
     </style>
 </head>
 
@@ -1047,6 +1079,11 @@
         </div>
     </footer>
 
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919265941833" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp"
+        class="whatsapp-float">
+        <i class="fab fa-whatsapp fa-2x" aria-hidden="true"></i>
+        </a>
     <script>
         // Hamburger menu toggle
         const hamburger = document.querySelector('.hamburger');
